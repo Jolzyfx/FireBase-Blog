@@ -15,7 +15,8 @@ const Home = ({isAuth}) => {
     };
     getPosts();
   
-  });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
   const deletePost = async (id) => {
     const postDoc = doc(db, "flame", id);
     await deleteDoc(postDoc);
